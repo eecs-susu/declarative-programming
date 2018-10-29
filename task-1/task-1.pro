@@ -7,7 +7,7 @@ predicates
     compare_second
     compare_third
     check_parity(integer)
-    chack_random_number_parity
+    check_random_number_parity
     power(integer, integer, integer)
     expression_first(integer, integer)
     deg_to_rad(real, real)
@@ -19,7 +19,7 @@ clauses
     compare_third :- P1=peter, P2=sally, P1>P2.
     check_parity(X) :- write(X, " is"), X mod 2 = 0, write(" even"), nl, !.
     check_parity(_) :- write(" odd"), nl.
-    chack_random_number_parity :- random(1000, X), check_parity(X).
+    check_random_number_parity :- random(1000, X), check_parity(X).
     power(0, X, 0) :- X > 0.
     power(X, 0, 1) :- X > 0.
     power(X, P, V) :- X>0, P>0, PD=P-1, power(X,PD,VR), V=VR*X.
