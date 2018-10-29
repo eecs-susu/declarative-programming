@@ -1,0 +1,8 @@
+Exe
+Obj
+**/*.inc
+**/*.pre
+**/*.vpr
+**/*.bk1
+**/*.grd
+**/*.BAK
