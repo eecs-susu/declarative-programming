@@ -11,4 +11,4 @@ clauses
     parent(ma, sa).
     parent(se, iv).
 goal
-    parent(ma, sa).
+    parent(X, iv), parent(Y, iv), X<>Y.
