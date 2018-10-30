@@ -9,4 +9,4 @@ clauses
     student("Ivan", "SP", "Comm", 2).
     student("Kiri", "ISIT", "Budget", 1).
 goal
-    student(Name, "ISIT", "Budget", 1), fail.
+    student(Name, "ISIT", "Budget", 1).
