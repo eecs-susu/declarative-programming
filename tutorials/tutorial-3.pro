@@ -12,3 +12,4 @@ clauses
     parent(se, iv).
 goal
     parent(X, iv), parent(Y, iv), X<>Y.
+    
