@@ -13,9 +13,9 @@ clauses
     
     sum_tree_leaves(empty, 0) :- !.
     sum_tree_leaves(tr(Value, empty, empty), Value) :- !.
-    sum_tree_leaves(tr(Value, Left, Right), Sum) :- sum_tree_leaves(Left, LeftSum),
+    sum_tree_leaves(tr(_, Left, Right), Sum) :- sum_tree_leaves(Left, LeftSum),
                                              sum_tree_leaves(Right, RightSum),
-                                             Sum = Value + LeftSum + RightSum.
+                                             Sum = LeftSum + RightSum.
 
     mean_tree_leaves(Tree, Mean) :- count_tree_leaves(Tree, LeavesCount), sum_tree_leaves(Tree, LeavesSum), Mean = LeavesSum / LeavesCount, !.
 goal
@@ -27,4 +27,5 @@ goal
             tr(6, empty, empty)
         )
     ),
+    sum_tree_leaves(BinaryTree, SUM),
     mean_tree_leaves(BinaryTree, LeavesMean).
